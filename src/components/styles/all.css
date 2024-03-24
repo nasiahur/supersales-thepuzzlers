@@ -1,0 +1,445 @@
+:root {
+    --surface-surface-brand: #FFDD2D;
+    --surface-surface-brand-soft: #ffe457;
+
+    --surface-surface-secondary: #E8FAFF;
+
+    --surface-surface-dark: #414141;
+    --surface-surface-dark-soft: #ececec;
+
+    --border-border-dark: #414141;
+    --border-border-dark-soft:  #ececec;
+
+    --text-text-primary: #414141;
+    --text-text-secondary: #5A5A5A;
+    --text-text-black: #000000;
+    --text-text-white:#FFFFFF;
+
+    --color-state-success:#5DC021;
+    --color-state-info:#0084BD;
+    --color-state-warning:#EE8B16;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {}
+}
+
+/* BUTTON */
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.45rem 2.5rem;
+    border-radius: 360px;
+
+    @apply font-sans font-bold text-base leading-5
+}
+
+.btn-main {
+    background: var(--surface-surface-brand);
+    color: var(--text-text-primary);
+    border: 1px solid var(--border-border-dark);
+    border-bottom: 3px solid var(--border-border-dark);
+}
+
+.btn-main:hover {
+    background: var(--surface-surface-brand-soft);
+}
+
+.btn-navbar {
+    padding: 0.45rem 1.8rem;
+}
+
+.btn-navbar:hover {
+    padding-bottom: 0.3rem;
+}
+
+.btn-navbar.active {
+    color: var(--text-text-black);
+    border: 1px solid var(--border-border-dark);
+    border-bottom: 3px solid var(--border-border-dark);
+}
+
+.btn-navbar.active:hover {
+    background-color: var(--surface-surface-dark-soft);
+    padding-bottom: 0.45rem;
+}
+
+
+.btn-navbar-close{
+    z-index: 99;
+    background: rgb(var(--background-end-rgb));
+    position: absolute;
+    left: -10%;
+    top: 50%;
+    bottom: 50%;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    border: 1px solid var(--border-border-dark);
+    border-bottom: 3px solid var(--border-border-dark);
+    padding: 0.8rem 1rem;
+}
+
+.btn-navbar-close:hover {
+    padding-bottom: 0.7rem;
+}
+
+.btn-icon {
+    padding: 0.2rem;
+    border-radius: 360px;
+}
+
+.btn-icon:hover {
+    background-color: var(--surface-surface-dark-soft);
+}
+
+.btn-primary {
+    padding: 1rem 3rem;
+
+    background-color: var(--surface-surface-brand);
+
+    border: 1px solid var(--border-border-dark);
+    border-bottom: 2px solid var(--border-border-dark);
+    border-radius: 360px;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+}
+
+.btn-primary:hover {
+    background-color: var(--surface-surface-brand-soft);
+}
+
+.btn-text {
+    padding: 0.5rem 0.5rem;
+    border-radius: 360px;
+}
+
+.btn-text:hover {
+    padding-bottom: 0.3rem;
+}
+
+/* NAVBAR */
+
+.navbar {
+    @apply hidden lg:flex flex-wrap items-center justify-center gap-1
+}
+
+.mobile-navbar {
+    background: rgb(var(--background-end-rgb));
+    margin-right: -20rem;
+    transition: margin-right 0.3s ease;
+    z-index: 99;
+
+    @apply p-10 fixed top-0 right-0 bottom-0 border-l h-screen flex flex-col items-center justify-between gap-1
+}
+
+.mobile-navbar.open {
+    margin-right: 0;
+}
+
+/* TYPOGRAPHY */
+
+.title-1 {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+
+    text-align: center;
+
+    color: var(--text-text-primary);
+
+    @media (max-width: 1024px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+.subtitle-1 {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+
+    text-align: center;
+
+    color: var(--text-text-secondary);
+
+    @media (max-width: 1024px) {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+}
+
+
+.button-1 {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+
+    text-align: center;
+
+    color: var(--text-text-primary);
+}
+
+.button-2 {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    text-align: center;
+
+    color: var(--text-text-primary);
+}
+
+.badge-1 {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.5rem;
+
+    text-align: center;
+
+    @media (max-width: 1024px) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+.card-1 {
+    border: 0.125rem solid var(--border-border-dark);
+    border-bottom: 0.5rem solid var(--border-border-dark);
+    border-radius: 1rem;
+}
+
+.card-bakcground-secondary-1 {
+    position: absolute;
+    left: 79.32%;
+    right: 1.88%;
+    top: 52.93%;
+    bottom: 15.59%;
+
+    background: var(--surface-surface-secondary);
+    border-radius: 1rem;
+}
+
+.card-bakcground-secondary-2 {
+    position: absolute;
+    left: -0.6%;
+    right: 87.18%;
+    top: 56.51%;
+    bottom: 22.75%;
+
+    background: var(--surface-surface-secondary);
+    border-radius: 1rem;
+}
+
+.card-bakcground-secondary-3 {
+    position: absolute;
+    left: 3.59%;
+    right: 80%;
+    top: 10.73%;
+    bottom: 63.81%;
+
+    background: var(--surface-surface-secondary);
+    border-radius: 1rem;
+}
+
+.star-1{
+    position: absolute;
+    left: 10%;
+    top: 0%;
+
+    @media (max-width: 1280px) {
+        left: 10%;
+        top: 0%;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 2.43rem;
+        left: 5%;
+        top: -4%;
+    }
+}
+
+.star-2{       
+    max-width: 2.125rem;
+    position: absolute;
+    right: 12%;
+    top: 12%;
+
+    @media (max-width: 1280px) {
+        right: 12%;
+        top: 17%;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 1.9rem;
+        right: 0%;
+        top: 20%;
+    }
+
+    @media (max-width: 530px) {
+        max-width: 1.9rem;
+        right: 0%;
+        top: 28%;
+    }
+}
+
+.star-3{
+    max-width: 3rem;
+
+    position: absolute;
+    right: 16%;
+    top: 17%;
+
+    @media (max-width: 1280px) {
+        right: 18%;
+        top: 20%;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 0rem;
+    }
+}
+
+.profile{
+    z-index: 3;
+    overflow: hidden;
+    border: 2px solid var(--border-border-dark);
+    border-bottom: 7px solid var(--border-border-dark);
+    border-radius: 360px;
+
+    @media (max-width: 1024px) {
+        max-width: 5.25rem;
+    }
+}
+
+.badge-profile{
+    z-index: 4;
+    padding: 0.7rem 2rem;
+
+    border-radius: 360px;
+    color:var(--text-text-white);
+    margin-top: -1.7rem;
+
+    @media (max-width: 1024px) {
+        padding: 0.25rem 1rem;
+    }
+}
+
+.badge-profile.client{
+    background-color:var(--color-state-success) ;
+}
+
+.badge-profile.sales{
+    background-color:var(--color-state-info) ;
+}
+
+.badge-profile.sales-manager{
+    background-color:var(--color-state-warning) ;
+}
+
+.card-client{
+    z-index: 3;
+    position: absolute;
+    right: -8%;
+    top: 5%;
+
+    @media (max-width: 1024px) {
+        right: -4%;
+        top: -7%;
+    }
+}
+
+.card-sales{
+    z-index: 3;
+    position: absolute;
+    left: -6.5%;
+    top: 49%;
+
+    @media (max-width: 1024px) {
+        left: -3.5%;
+        top: 49%;
+    }
+}
+
+
+.card-sales-manager{
+    z-index: 3;
+    position: absolute;
+    right: -7.5%;
+    top: 71.5%;
+
+    @media (max-width: 1300px) {
+        right: -8.5%;
+        top: 68%;
+    }
+
+    @media (max-width: 1024px) {
+        right: -4.5%;
+        top: 71.5%;
+    }
+
+    @media (max-width: 768px) {
+        right: -5%;
+        top: 70%;
+    }
+
+    @media (max-width: 640px) {
+        right: -3%;
+        top: 82%;
+    }
+    
+}
+
+
+.scroll {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+    white-space: nowrap;
+    animation: loop 30s linear infinite;
+}
+
+.fade {
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    pointer-event: none;
+}
+
+@keyframes loop {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-100%);}
+}
+.item {
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    color: #e2e8f0;
+    font-size: .9rem;
+    background-color: #152c41;
+    padding: 0.7rem 1rem;
+    margin: 0rem 1rem;
+    border-radius: 0.4rem;
+    white-space: nowrap;
+    box-shadow:
+    0 0.1rem 0.2rem #00000033,
+    0 0.1rem 0.5rem #0000004d,
+    0 0.2rem 01.5rem #00000066,
+}
