@@ -260,48 +260,38 @@
 
 .star-1{
     position: absolute;
-    left: 10%;
-    top: 0%;
+    left: 0%;
+    top: -6%;
 
     @media (max-width: 1280px) {
-        left: 10%;
-        top: 0%;
+        max-width: 2.43rem;
+        left: 0%;
+        top: -10%;
     }
 
     @media (max-width: 1024px) {
         max-width: 2.43rem;
         left: 5%;
-        top: -4%;
+        top: -12%;
     }
 }
 
 .star-2{       
     max-width: 2.125rem;
     position: absolute;
-    right: 12%;
-    top: 10%;
-
-    @media (max-width: 1280px) {
-        right: 12%;
-        top: 10%;
-    }
+    right: 0%;
+    top: 53%;
 
     @media (max-width: 1024px) {
         max-width: 1.9rem;
-        right: 8%;
-        top: 12%;
+        right: 10%;
+        top: 50%;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
         max-width: 1.9rem;
-        right: 8%;
-        top: 14%;
-    }
-
-    @media (max-width: 530px) {
-        max-width: 1.9rem;
-        right: 0.2%;
-        top: 20.5%;
+        right: 2%;
+        top: 55%;
     }
 }
 
@@ -309,17 +299,12 @@
     max-width: 3rem;
 
     position: absolute;
-    right: 16%;
-    top: 13%;
-
-    @media (max-width: 1280px) {
-        right: 18%;
-        top: 16%;
-    }
+    right: 6%;
+    top: 73%;
 
     @media (max-width: 1024px) {
-        right: 18%;
-        top: 17%;
+        right: 10%;
+        top: 70%;
     }
 
     @media (max-width: 768px) {
@@ -372,7 +357,7 @@
 
     @media (max-width: 1024px) {
         right: -4%;
-        top: -7%;
+        top: -8%;
     }
 }
 

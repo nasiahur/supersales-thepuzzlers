@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-16 mt-16 relative">
-      <div className="flex flex-col items-center justify-center gap-6 p-4 w-full lg:w-2/3">
+      <div className="flex flex-col items-center justify-center gap-6 p-4 w-full lg:w-2/3 relative">
         <p className="title-1">Field sales software for humans</p>
         <p className="subtitle-1">
           Supersales enables your team to perform at the highest level, yet stay human. With a sleek design and an easy-to-navigate app.
