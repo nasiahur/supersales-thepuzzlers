@@ -81,11 +81,11 @@
     margin: auto;
     border: 1px solid var(--border-border-dark);
     border-bottom: 3px solid var(--border-border-dark);
-    padding: 0.8rem 1rem;
+    padding: 0.6rem 1rem;
 }
 
 .btn-navbar-close:hover {
-    padding-bottom: 0.7rem;
+    padding-bottom: 0.5rem;
 }
 
 .btn-icon {
@@ -136,7 +136,7 @@
     transition: margin-right 0.3s ease;
     z-index: 99;
 
-    @apply p-10 fixed top-0 right-0 bottom-0 border-l h-screen flex flex-col items-center justify-between gap-1
+    @apply p-10 fixed top-0 right-0 bottom-0 border-l h-[100dvh] flex flex-col items-center justify-between gap-1
 }
 
 .mobile-navbar.open {
@@ -279,23 +279,29 @@
     max-width: 2.125rem;
     position: absolute;
     right: 12%;
-    top: 12%;
+    top: 10%;
 
     @media (max-width: 1280px) {
         right: 12%;
-        top: 17%;
+        top: 10%;
     }
 
     @media (max-width: 1024px) {
         max-width: 1.9rem;
-        right: 0%;
-        top: 20%;
+        right: 8%;
+        top: 12%;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 1.9rem;
+        right: 8%;
+        top: 14%;
     }
 
     @media (max-width: 530px) {
         max-width: 1.9rem;
-        right: 0%;
-        top: 28%;
+        right: 1%;
+        top: 19.5%;
     }
 }
 
@@ -304,14 +310,19 @@
 
     position: absolute;
     right: 16%;
-    top: 17%;
+    top: 13%;
 
     @media (max-width: 1280px) {
         right: 18%;
-        top: 20%;
+        top: 16%;
     }
 
     @media (max-width: 1024px) {
+        right: 18%;
+        top: 17%;
+    }
+
+    @media (max-width: 768px) {
         max-width: 0rem;
     }
 }
