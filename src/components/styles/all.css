@@ -325,6 +325,7 @@
 }
 
 .badge-profile {
+    opacity: 0;
     z-index: 4;
     padding: 0.7rem 2rem;
 
@@ -335,10 +336,6 @@
     @media (max-width: 1024px) {
         padding: 0.25rem 1rem;
     }
-}
-
-.badge-profile.animate {
-    animation: fadeIn 1s ease-in forwards;
 }
 
 .badge-profile.client {
@@ -453,6 +450,10 @@
     opacity: 0; /* Hide initially */
 }
 
-.profile-card.animate {
+.profile-card.onAnimateProfile {
     animation: fadeInFromBottom 1s ease-in forwards;
+}
+
+.badge-profile.onAnimateProfile{
+    animation: fadeIn 1s ease-in forwards;
 }
