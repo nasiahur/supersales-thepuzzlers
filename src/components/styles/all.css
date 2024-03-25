@@ -416,6 +416,7 @@
 
 .brand-list {
     height: 5rem;
+
     @media (min-width: 1024px) {
         display: flex;
         align-items: center;
@@ -423,9 +424,9 @@
     }
 }
 
-.img-brand{
+.img-brand {
     width: 12rem;
-    height: auto ;
+    height: auto;
 
     @media (max-width: 1240px) {
         width: 10rem;
@@ -442,6 +443,7 @@
         opacity: 0;
         transform: translateY(70px);
     }
+
     100% {
         opacity: 1;
         visibility: visible;
@@ -453,21 +455,24 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
 
 .profile-card {
-    visibility: hidden; /* Hide initially */
-    opacity: 0; /* Hide initially */
+    visibility: hidden;
+    /* Hide initially */
+    opacity: 0;
+    /* Hide initially */
 }
 
 .profile-card.onAnimateProfile {
     animation: fadeInFromBottom 1s ease-in forwards;
 }
 
-.badge-profile.onAnimateProfile{
+.badge-profile.onAnimateProfile {
     animation: fadeIn 1s ease-in forwards;
 }
 
@@ -475,6 +480,7 @@
     0% {
         transform: translateX(50px);
     }
+
     100% {
         transform: translateX(0px);
     }
@@ -484,6 +490,7 @@
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(50px);
     }
@@ -495,4 +502,47 @@
 
 .move-left {
     animation: moveLeftButton 1s ease forwards;
+}
+
+
+.star-1 img {
+    animation: starAnimation1 5s infinite alternate ease-in-out
+}
+
+.star-2 img {
+    animation: starAnimation2 5s infinite alternate ease-in-out
+}
+
+.star-3 img {
+    animation: starAnimation1 5s infinite alternate ease-in-out
+}
+
+@keyframes starAnimation1 {
+    0% {
+        transform: scale(0.9) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(20deg);
+        /* Adjust scale and rotation angle as needed */
+    }
+
+    100% {
+        transform: scale(0.7) rotate(0deg);
+    }
+}
+
+
+@keyframes starAnimation2 {
+    0% {
+        transform: scale(1.1) rotate(20deg);
+    }
+
+    50% {
+        transform: scale(0.7) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(0.9) rotate(20deg);
+    }
 }

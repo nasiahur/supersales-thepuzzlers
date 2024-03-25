@@ -14,7 +14,7 @@ export const HomeTitle = () => {
                     See how it works
                 </button>
             </div>
-            <div className="star-1">
+            <div className="star-1 stars">
                 <Image src="/images/star.svg" width={51} height={51} alt="star" />
             </div>
             <div className="star-2">
