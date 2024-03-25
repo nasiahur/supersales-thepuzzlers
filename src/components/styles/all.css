@@ -8,16 +8,16 @@
     --surface-surface-dark-soft: #ececec;
 
     --border-border-dark: #414141;
-    --border-border-dark-soft:  #ececec;
+    --border-border-dark-soft: #ececec;
 
     --text-text-primary: #414141;
     --text-text-secondary: #5A5A5A;
     --text-text-black: #000000;
-    --text-text-white:#FFFFFF;
+    --text-text-white: #FFFFFF;
 
-    --color-state-success:#5DC021;
-    --color-state-info:#0084BD;
-    --color-state-warning:#EE8B16;
+    --color-state-success: #5DC021;
+    --color-state-info: #0084BD;
+    --color-state-warning: #EE8B16;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,7 +69,7 @@
 }
 
 
-.btn-navbar-close{
+.btn-navbar-close {
     z-index: 99;
     background: rgb(var(--background-end-rgb));
     position: absolute;
@@ -258,7 +258,7 @@
     border-radius: 1rem;
 }
 
-.star-1{
+.star-1 {
     position: absolute;
     left: 0%;
     top: -6%;
@@ -276,7 +276,7 @@
     }
 }
 
-.star-2{       
+.star-2 {
     max-width: 2.125rem;
     position: absolute;
     right: 0%;
@@ -295,7 +295,7 @@
     }
 }
 
-.star-3{
+.star-3 {
     max-width: 3rem;
 
     position: absolute;
@@ -312,7 +312,7 @@
     }
 }
 
-.profile{
+.profile {
     z-index: 3;
     overflow: hidden;
     border: 2px solid var(--border-border-dark);
@@ -324,12 +324,12 @@
     }
 }
 
-.badge-profile{
+.badge-profile {
     z-index: 4;
     padding: 0.7rem 2rem;
 
     border-radius: 360px;
-    color:var(--text-text-white);
+    color: var(--text-text-white);
     margin-top: -1.7rem;
 
     @media (max-width: 1024px) {
@@ -337,19 +337,23 @@
     }
 }
 
-.badge-profile.client{
-    background-color:var(--color-state-success) ;
+.badge-profile.animate {
+    animation: fadeIn 1s ease-in forwards;
 }
 
-.badge-profile.sales{
-    background-color:var(--color-state-info) ;
+.badge-profile.client {
+    background-color: var(--color-state-success);
 }
 
-.badge-profile.sales-manager{
-    background-color:var(--color-state-warning) ;
+.badge-profile.sales {
+    background-color: var(--color-state-info);
 }
 
-.card-client{
+.badge-profile.sales-manager {
+    background-color: var(--color-state-warning);
+}
+
+.card-client {
     z-index: 3;
     position: absolute;
     right: -8%;
@@ -361,7 +365,7 @@
     }
 }
 
-.card-sales{
+.card-sales {
     z-index: 3;
     position: absolute;
     left: -6.5%;
@@ -373,8 +377,7 @@
     }
 }
 
-
-.card-sales-manager{
+.card-sales-manager {
     z-index: 3;
     position: absolute;
     right: -7.5%;
@@ -399,43 +402,57 @@
         right: -3%;
         top: 82%;
     }
-    
 }
 
-
-.scroll {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: fit-content;
-    white-space: nowrap;
-    animation: loop 30s linear infinite;
+.brand-list {
+    height: 5rem;
+    @media (min-width: 1024px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
-.fade {
-    width: 100%;
-    position: absolute;
-    inset: 0;
-    pointer-event: none;
+.img-brand{
+    width: 12rem;
+    height: auto ;
+
+    @media (max-width: 1240px) {
+        width: 10rem;
+    }
 }
 
-@keyframes loop {
-    0% {transform: translateX(0%);}
-    100% {transform: translateX(-100%);}
+.brand-list div {
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
-.item {
-    display: flex;
-    align-items: center;
-    gap: 0 0.2rem;
-    color: #e2e8f0;
-    font-size: .9rem;
-    background-color: #152c41;
-    padding: 0.7rem 1rem;
-    margin: 0rem 1rem;
-    border-radius: 0.4rem;
-    white-space: nowrap;
-    box-shadow:
-    0 0.1rem 0.2rem #00000033,
-    0 0.1rem 0.5rem #0000004d,
-    0 0.2rem 01.5rem #00000066,
+
+@keyframes fadeInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.profile-card {
+    visibility: hidden; /* Hide initially */
+    opacity: 0; /* Hide initially */
+}
+
+.profile-card.animate {
+    animation: fadeInFromBottom 1s ease-in forwards;
 }
