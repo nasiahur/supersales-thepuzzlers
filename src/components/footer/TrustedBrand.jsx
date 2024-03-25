@@ -4,6 +4,7 @@ import "@/components/styles/scroller.css";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { animationCardBanner } from "./animationCardBrand";
 
 export const FooterTrustedBrand = () => {
     const brands = [
@@ -20,25 +21,9 @@ export const FooterTrustedBrand = () => {
         const scrollers = document.querySelectorAll(".scroller");
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             if (window.innerWidth < 1024) {
-                addAnimation();
+                animationCardBanner(scrollers);
             }
         }
-
-        function addAnimation() {
-            scrollers.forEach((scroller) => {
-                scroller.setAttribute("data-animated", true);
-
-                const scrollerInner = scroller.querySelector(".scroller__inner");
-                const scrollerContent = Array.from(scrollerInner.children);
-
-                scrollerContent.forEach((item) => {
-                    const duplicatedItem = item.cloneNode(true);
-                    duplicatedItem.setAttribute("aria-hidden", true);
-                    scrollerInner.appendChild(duplicatedItem);
-                });
-            });
-        }
-
     }, [ready]);
 
     return (

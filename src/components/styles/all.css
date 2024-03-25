@@ -133,7 +133,7 @@
 .mobile-navbar {
     background: rgb(var(--background-end-rgb));
     margin-right: -20rem;
-    transition: margin-right 0.3s ease;
+    transition: margin-right 1s ease;
     z-index: 99;
 
     @apply p-10 fixed top-0 right-0 bottom-0 border-l h-[100dvh] flex flex-col items-center justify-between gap-1
@@ -456,4 +456,30 @@
 
 .badge-profile.onAnimateProfile{
     animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes moveLeftButton {
+    0% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveRightButton {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+.move-right {
+    animation: moveRightButton 0.5s ease forwards;
+}
+
+.move-left {
+    animation: moveLeftButton 1s ease forwards;
 }

@@ -29,6 +29,22 @@ export const NavItems = () => {
     }, [boxOutsideClick]);
 
     useEffect(() => {
+        if(isOpen){
+            document.querySelector('.btn-navbar-close').classList.add('move-left');
+            document.querySelector('.btn-navbar-close').innerHTML = "<"
+            setTimeout(() => {
+                document.querySelector('.btn-navbar-close').classList.remove('move-left');
+                document.querySelector('.btn-navbar-close').innerHTML = ">"
+            }, 1000); 
+        }else{
+            document.querySelector('.btn-navbar-close').classList.add('move-right');
+            setTimeout(() => {
+                document.querySelector('.btn-navbar-close').classList.remove('move-right');
+            }, 500); 
+        }
+    }, [isOpen]);
+
+    useEffect(() => {
         setIsOpen(false);
     }, [pathName]);
 
@@ -48,7 +64,7 @@ export const NavItems = () => {
                     <div className="mt-5">
                         <TryNow />
                     </div>
-                    <button onClick={()=>setIsOpen(false)} type="button" className="btn btn-navbar-close">{">"}</button>
+                    <button onClick={()=>setIsOpen(false)} type="button" className="btn btn-navbar-close"></button>
                 </div>
             </div>
             <div className="navbar">
