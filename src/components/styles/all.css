@@ -329,7 +329,7 @@
     z-index: 3;
     overflow: hidden;
     border: 2px solid var(--border-border-dark);
-    border-bottom: 7px solid var(--border-border-dark);
+    border-bottom: 5px solid var(--border-border-dark);
     border-radius: 360px;
 
     @media (max-width: 1024px) {
