@@ -506,15 +506,15 @@
 
 
 .star-1 img {
-    animation: starAnimation1 5s infinite alternate ease-in-out
+    animation: starAnimation1 3s infinite alternate ease-in-out
 }
 
 .star-2 img {
-    animation: starAnimation2 5s infinite alternate ease-in-out
+    animation: starAnimation2 3s infinite alternate ease-in-out
 }
 
 .star-3 img {
-    animation: starAnimation1 5s infinite alternate ease-in-out
+    animation: starAnimation1 3s infinite alternate ease-in-out
 }
 
 @keyframes starAnimation1 {
