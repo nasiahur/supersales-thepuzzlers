@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Supersales",
-  description: "Supersales Landing Page by Nur Asiah ",
+  description: "Supersales Challenge The Puzzlers by Nur Asiah",
 };
 
 export default function RootLayout({ children }) {

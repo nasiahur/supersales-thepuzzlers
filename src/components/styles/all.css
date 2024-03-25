@@ -137,6 +137,10 @@
     padding-bottom: 0.3rem;
 }
 
+.btn-text:focus {
+    padding-bottom: 0.3rem;
+}
+
 /* NAVBAR */
 
 .navbar {
