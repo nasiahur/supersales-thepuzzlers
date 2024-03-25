@@ -29,17 +29,18 @@ export const NavItems = () => {
     }, [boxOutsideClick]);
 
     useEffect(() => {
+        const el = document.querySelector('.btn-navbar-close')
         if(isOpen){
-            document.querySelector('.btn-navbar-close').classList.add('move-left');
-            document.querySelector('.btn-navbar-close').innerHTML = "<"
+           el .classList.add('move-left');
+            el.innerHTML = "<"
             setTimeout(() => {
-                document.querySelector('.btn-navbar-close').classList.remove('move-left');
-                document.querySelector('.btn-navbar-close').innerHTML = ">"
+                el.classList.remove('move-left');
+                el.innerHTML = ">"
             }, 1000); 
         }else{
-            document.querySelector('.btn-navbar-close').classList.add('move-right');
+            el.classList.add('move-right');
             setTimeout(() => {
-                document.querySelector('.btn-navbar-close').classList.remove('move-right');
+                el.classList.remove('move-right');
             }, 500); 
         }
     }, [isOpen]);
