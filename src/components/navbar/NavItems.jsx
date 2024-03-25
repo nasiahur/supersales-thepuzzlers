@@ -31,13 +31,15 @@ export const NavItems = () => {
     useEffect(() => {
         const el = document.querySelector('.btn-navbar-close')
         if(isOpen){
-           el .classList.add('move-left');
+           el.classList.add('move-left');
             el.innerHTML = "<"
             setTimeout(() => {
                 el.classList.remove('move-left');
+                el.classList.add('vibrating');
                 el.innerHTML = "x"
             }, 1000); 
         }else{
+            el.classList.remove('vibrating');
             el.classList.add('move-right');
             el.innerHTML = ">"
             setTimeout(() => {

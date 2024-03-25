@@ -134,11 +134,11 @@
 }
 
 .btn-text:hover {
-    padding-bottom: 0.3rem;
+    transform: scale(.9);
 }
 
 .btn-text:focus {
-    padding-bottom: 0.3rem;
+    transform: scale(.9);
 }
 
 /* NAVBAR */
@@ -474,4 +474,8 @@
 
 .star-3 img {
     animation: starAnimation1 3s infinite alternate ease-in-out
+}
+
+.vibrating {
+    animation: vibrate 1s ease forwards;
 }
