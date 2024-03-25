@@ -501,11 +501,11 @@
 }
 
 .move-right {
-    animation: moveRightButton 0.5s ease forwards;
+    animation: moveRightButton 1.5s ease forwards;
 }
 
 .move-left {
-    animation: moveLeftButton 1s ease forwards;
+    animation: moveLeftButton 1.5s ease forwards;
 }
 
 
