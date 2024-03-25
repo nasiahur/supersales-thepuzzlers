@@ -37,9 +37,3 @@
 .scroller[data-speed="slow"] {
     --_animation-duration: 60s;
 }
-
-@keyframes scroll {
-    to {
-        transform: translate(calc(-50% - 0.5rem));
-    }
-}

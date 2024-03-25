@@ -35,12 +35,14 @@ export const NavItems = () => {
             el.innerHTML = "<"
             setTimeout(() => {
                 el.classList.remove('move-left');
-                el.innerHTML = ">"
+                el.innerHTML = "x"
             }, 1000); 
         }else{
             el.classList.add('move-right');
+            el.innerHTML = ">"
             setTimeout(() => {
                 el.classList.remove('move-right');
+                el.innerHTML = "x"
             }, 500); 
         }
     }, [isOpen]);
